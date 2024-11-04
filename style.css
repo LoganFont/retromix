@@ -1,0 +1,433 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Fondo oscuro y estilo neón */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: url('background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+}
+
+/* Superposición borrosa para el efecto de ventana empañada */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1); /* Fondo semi-transparente */
+    backdrop-filter: blur(10px); /* Efecto de desenfoque */
+    z-index: -1; /* Mantiene el overlay detrás del contenido */
+}
+
+/* Encabezado y navegación */
+.header {
+    padding: 20px;
+    /*background-color: #1a1a1a;*/
+}
+
+.logo {
+    font-size: 2rem;
+    color: #ffffff; /* Verde neón */
+    text-shadow: 0 0 10px #ffffff;
+    font-weight: 600;
+}
+
+.nav {
+    margin-top: 10px;
+}
+
+.nav a {
+    color: #39ff14;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+    font-size: large;
+    font-family: sans-serif;
+}
+
+.nav a:hover {
+    color: #ff6ec7; /* Rosa neón */
+    text-shadow: 0 0 10px #ff6ec7;
+}
+
+/* Secciones */
+.seccion {
+    padding: 50px;
+}
+
+.seccion h2 {
+    font-size: 3rem;
+    color: #39ff14;
+    text-shadow: 0 0 10px #39ff14;
+    font-weight: 400;
+}
+
+.productos {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.producto {
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: 8px;
+    width: 150px;
+    color: #ff6ec7;
+    text-shadow: 0 0 5px #ff6ec7;
+}
+
+/* Redes sociales */
+.sociales a {
+    color: #39ff14;
+    font-size: 1.5rem;
+    margin: 10px;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.sociales {
+    margin-top: 20px;
+}
+
+.sociales a:hover {
+    color: #ff6ec7;
+    text-shadow: 0 0 10px #ff6ec7;
+    font-size: 2rem;
+    transition: 0.4s;
+}
+
+@keyframes parpadeoNeon {
+    0%, 100% {
+        text-shadow: 0 0 5px #39ff14, 0 0 10px #39ff14, 0 0 20px #39ff14, 0 0 30px #39ff14;
+    }
+    50% {
+        text-shadow: 0 0 5px #ff6ec7, 0 0 10px #ff6ec7, 0 0 20px #ff6ec7, 0 0 30px #ff6ec7;
+    }
+}
+
+.logo {
+    font-size: 2rem;
+    color: #d9ffd3;
+    animation: parpadeoNeon 1.5s infinite alternate;
+}
+
+.nav a {
+    color: #39ff14;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.nav a:hover {
+    color: #ff6ec7;
+    text-shadow: 0 0 10px #ff6ec7;
+}
+
+@keyframes aparecer {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.seccion {
+    padding: 50px 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; /* Oculto por defecto */
+    animation: aparecer 1s ease forwards;
+}
+
+.producto {
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: 8px;
+    width: 150px;
+    color: #ff6ec7;
+    text-shadow: 0 0 5px #ff6ec7;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.producto:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #ff6ec7;
+}
+
+/* Ajustes generales para elementos flexibles */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    padding: 10px; /* Espacio en los bordes para dispositivos pequeños */
+}
+
+/* Hacer que el menú de navegación se ajuste al centro en dispositivos más pequeños */
+.nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Permite que los elementos se alineen en múltiples filas */
+    gap: 10px;
+}
+
+.nav a {
+    padding: 5px 10px;
+}
+
+/* Ajuste de las secciones para dispositivos móviles */
+.seccion {
+    padding: 30px 10px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Hacer que los productos se alineen en una columna en pantallas pequeñas */
+.productos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.producto {
+    width: 100px; /* Tamaño reducido para pantallas pequeñas */
+}
+
+@media (max-width: 1320px) {
+    .producto-destacado {
+        height: 400px;
+    }
+}
+
+/* Media query para pantallas medianas (tabletas) */
+@media (max-width: 768px) {
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    .producto {
+        width: 120px;
+    }
+
+    .producto-destacado {
+        height: 290px;
+    }
+}
+
+/* Media query para pantallas pequeñas (móviles) */
+@media (max-width: 480px) {
+    .logo {
+        font-size: 1.2rem;
+    }
+
+    .nav a {
+        font-size: 0.9rem;
+        margin: 5px;
+    }
+
+    .producto {
+        width: 90px;
+    }
+
+    .seccion h2 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Estilo del botón de hamburguesa */
+.menu-toggle {
+    display: none; /* Oculto por defecto en pantallas grandes */
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: #fff;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1100;
+    cursor: pointer;
+}
+
+/* Menu oculto en dispositivos móviles */
+.nav {
+    display: flex;
+    gap: 10px;
+    transition: transform 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav {
+        display: none; /* Oculto por defecto en móviles */
+        flex-direction: column;
+        position: fixed; /* Fijo para cubrir toda la pantalla */
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 60%;
+        background-color: rgba(0, 0, 0, 0.9); /* Fondo oscuro */
+        padding-top: 60px;
+        z-index: 1000; /* Por debajo del botón pero encima de otros contenidos */
+        transform: translateX(100%); /* Inicialmente fuera de la vista */
+    }
+
+    .nav.active {
+        display: flex;
+        transform: translateX(0); /* Desliza dentro de la vista */
+    }
+
+    .nav a {
+        margin: 10px 0;
+        font-size: 1.2rem;
+        color: #fff;
+        text-align: center;
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px; /* Bordes suaves */
+}
+
+@media (max-width: 768px) {
+    .producto {
+        transition: transform 0.2s ease;
+    }
+}
+
+/* Estilos de productos destacados */
+
+.productos-principales h2{
+    font-size: 4rem;
+    color: #39ff14;
+    text-shadow: 0 0 10px #39ff14;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.productos-principales {
+    text-align: center;
+    padding: 40px 0;
+}
+
+.productos-destacados {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.producto-destacado {
+    width: 400px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.producto-destacado:hover {
+    transform: scale(1.1);
+}
+
+/* Sección de información de productos */
+.producto-info {
+    margin-top: 20px;
+    text-align: center;
+    color: #fff;
+}
+
+/* Media Query para dispositivos móviles */
+@media (max-width: 768px) {
+    .productos-destacados {
+        flex-direction: column; /* Cambiar a columna en móviles */
+        align-items: center; /* Centrar las imágenes */
+    }
+
+    .producto-destacado {
+        width: 80%; /* Hacer las imágenes más grandes en móviles */
+        max-width: 300px; /* Tamaño máximo para las imágenes */
+        margin-bottom: 20px; /* Espacio entre imágenes */
+    }
+}
+
+/* Media Query para dispositivos móviles */
+@media (max-width: 768px) {
+    .productos-principales h2 {
+        font-size: 3rem; /* Tamaño de fuente más pequeño en móviles */
+        margin-bottom: 15px; /* Espaciado inferior reducido */
+        font-weight: 10;
+    }
+}
+
+header, main, footer {
+    z-index: 1; /* Por debajo del menú y botón de hamburguesa */
+}
+
+.producto-detalle {
+    display: none; /* Oculto por defecto */
+    margin-top: 20px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro */
+    color: #fff;
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* Estilos para el botón del producto */
+.producto-boton {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #39ff14;
+    background-color: transparent;
+    border: 2px solid #39ff14;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.producto-boton:hover {
+    background-color: #39ff14;
+    color: #000;
+}
+
+.producto-info,
+.producto-detalle {
+    display: none; /* Ocultas por defecto */
+    margin-top: 20px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro */
+    color: #fff;
+    border-radius: 8px;
+    text-align: center;
+}
