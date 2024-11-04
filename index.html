@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RetroMix Bar</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="logo.jpg" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="overlay"></div>
+    <header class="header">
+        <h1 class="logo">RetroMix Bar</h1>
+        <button class="menu-toggle" aria-label="Toggle Menu">&#9776;</button>
+        <nav class="nav">
+            <a href="#productos">Productos</a>
+            <a href="#menu">Menú</a>
+            <a href="#ubicacion">Ubicación</a>
+            <a href="#contacto">Redes Sociales</a>
+        </nav>
+    </header>
+
+    <section id="productos-principales" class="productos-principales">
+        <h2>Productos Destacados</h2>
+        <div class="productos-destacados">
+            <img data-product-id="1" src="img1.jpg" alt="Producto 1" data-product-id="1" class="producto-destacado">
+            <img data-product-id="2" src="img2.jpg" alt="Producto 2" data-product-id="2" class="producto-destacado">
+            <img data-product-id="3" src="img3.jpg" alt="Producto 3" data-product-id="3" class="producto-destacado">
+        </div>
+    </section>
+
+    <section id="productos" class="seccion">
+        <h2>Productos</h2>
+        <p>Explora nuestra variedad de productos exclusivos de mixología.</p>
+        <div class="productos">
+            <button data-product-id="1" class="producto-boton">Producto 1</button>
+            <button data-product-id="2" class="producto-boton">Producto 2</button>
+            <button data-product-id="3" class="producto-boton">Producto 3</button>
+            <button data-product-id="4" class="producto-boton">Producto 4</button>
+            <button data-product-id="5" class="producto-boton">Producto 5</button>
+        </div>
+        <div id="producto-detalle" class="producto-detalle">
+            <h3 id="producto-titulo"></h3>
+            <p id="producto-descripcion"></p>
+        </div>
+    </section>
+
+    <section id="productos" class="productos">
+        <h2>Información de Productos</h2>
+        <div id="producto-info" class="producto-info">
+            <!-- Aquí se muestra la información del producto al hacer clic -->
+            <p>Selecciona un producto para ver detalles</p>
+        </div>
+    </section>
+
+    <section id="menu" class="seccion">
+        <h2>Menú</h2>
+        <p>Disfruta de nuestro menú de cócteles artesanales.</p>
+    </section>
+
+    <section id="ubicacion" class="seccion">
+        <h2>Ubicación</h2>
+        <p>Nos encontramos en el corazón de la ciudad.</p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d4389.081865212055!2d-99.13512230999405!3d19.43338462354633!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2smx!4v1730699967509!5m2!1ses!2smx" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+
+    <section id="contacto" class="seccion">
+        <h2>Síguenos en Redes Sociales</h2>
+        <div class="sociales">
+            <a href="https://www.instagram.com/retromix_bar?igsh=MWJscnIzd2hsdWF2NQ==" target="_blank">Instagram</a>
+            <a href="https://www.tiktok.com/@retro_mix_bar?_t=8r6PZ5GAvv3&_r=1" target="_blank">TikTok</a>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+
+    <div class="frase-final">
+        Evite el exceso
+    </div>
+</body>
+</html>
